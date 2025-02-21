@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    background-image: url(../imagens/QRB_Transparent.png);
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    animation: rotateBackground 50s infinite linear;
+}
+@keyframes rotateBackground{
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 100% 50%;
+    }
+}
+header {
+    background-color: #010101;
+    color: #BB0303;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: clamp(12px, 4vw, 40px);
+    font-weight: bold;
+    margin-right: 40px;
+    white-space: nowrap;
+}
+.logo img{
+    width: 50px;
+    height: auto;
+}
+nav{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 25px;
+}
+
+nav ul li a {
+    color: #E7EAE1;
+    text-decoration: none;
+    font-size: clamp(5px, 4vw, 15px);
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #BB0303;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+}
+
+.perfil button {
+    background-color: #72B7BC;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #72b7bccc;
+    cursor: pointer;
+    font-size: clamp(5px, 4vw, 15px);
+    transition: 0.3s;
+}
+
+.perfil button:hover {
+    background-color: #0D2233;
+    box-shadow: 2px 2px 2px #0D2233cc;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 20px;
+    text-align: center;
+}
+main p{
+    font-size: clamp(2em, 5vw, 5em);
+    max-width: 80%;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    background-color: rgb(114, 183, 188, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0px 0px 5px 1px #010101d3;
+}
