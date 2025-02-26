@@ -34,17 +34,19 @@
         <section class="titulo">
             <p>Procure pela música desejada no repertório</p>
         </section>
+
         <section class="pesquisar">
             <div class="campo-pesquisa">
                 <input type="text" id="pesquisa" placeholder="Buscar...">
-                <button type="button">Pesquisar</button>
+                <button onclick="buscarMusica()">Pesquisar</button>
             </div>
         </section>
-        <section class="video">
-            <div class="video-incorporado">
-                <iframe width="450" height="315" src="https://www.youtube.com/embed/9Zgg37TC178?si=1TRrCoieUg8O5Un3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </section>
+
+        <!-- Aqui será inserido o iframe com o vídeo -->
+        <div id="resultados"></div>
+
+        <script src="banco/links_youtube.js"></script> <!-- Importa o arquivo com os dados das músicas -->
+        <script src="interacao/buscaryt.js"></script> <!-- Importa o script para buscar e mostrar o vídeo -->
     </main>
 </body>
 </html>
