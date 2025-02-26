@@ -97,3 +97,49 @@ header{
 .menu-aberto {
     left: 0 !important;
 }
+
+/* ======= Pagina Musicas ======= */
+.titulo{
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 1.8em;
+    font-weight: bolder;
+    text-align: center;
+    color: #919191;
+}
+.campo-pesquisa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+.campo-pesquisa input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui o padding no cálculo da largura */
+}
+.campo-pesquisa button {
+    width: 30%;
+    background-color: #007bff;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+.campo-pesquisa button:hover {
+    background-color: #0056b3;
+}
+.video-incorporado{
+    text-align: center;
+}

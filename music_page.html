@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Quebrantados</title>
+    <title>Músicas</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
@@ -16,18 +16,35 @@
             </button>
         </div>
         <div class="logo">
-            <img src="imagens/QRB_Transparent.png" alt="Logo">
+            <a href="index.html"><img src="imagens/QRB_Transparent.png" alt="Logo"></a>
         </div>
     </header>
 
     <!-- Menu Lateral -->
     <div id="menuLateral" class="menu-lateral">
         <ul>
-            <li><a href="music_page.html">Músicas</a></li>
+            <li><a href="#">Músicas</a></li>
             <li><a href="#">Modo Ensaio</a></li>
             <li><a href="#">Cifras</a></li>
         </ul>
     </div>
     <script src="interacao/menu.js"></script> <!-- Interação em JS para o botão menu -->
+
+    <main>
+        <section class="titulo">
+            <p>Procure pela música desejada no repertório</p>
+        </section>
+        <section class="pesquisar">
+            <div class="campo-pesquisa">
+                <input type="text" id="pesquisa" placeholder="Buscar...">
+                <button type="button">Pesquisar</button>
+            </div>
+        </section>
+        <section class="video">
+            <div class="video-incorporado">
+                <iframe width="450" height="315" src="https://www.youtube.com/embed/9Zgg37TC178?si=1TRrCoieUg8O5Un3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
