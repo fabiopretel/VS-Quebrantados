@@ -5,6 +5,9 @@
     box-sizing: border-box;
 }
 body{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
     font-family: Arial, sans-serif;
 }
 header{
@@ -22,6 +25,28 @@ header{
     margin: 0 auto;
     width: 80px;
 }
+
+
+/* ========== HOME ========== */
+main{
+    padding: 20px;
+    background: linear-gradient(200deg, 
+        #292929 30%,
+        #0C0C0D 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sub-titulo{
+    width: 400px;
+    margin: -10px auto 10px;
+    font-size: 1em;
+    font-weight: lighter;
+    text-align: center;
+    color: white;
+}
+
 
 /* ======= Botão Menu ======= */
 .botaoMenu{
@@ -60,6 +85,7 @@ header{
     transform: scale(0.9);
 }
 
+
  /* ======= Menu Lateral ======= */
  .menu-lateral{
     /*Alinhamento*/
@@ -71,8 +97,8 @@ header{
     z-index: 999; /* Menor que o botão, para o botão continuar visível */
 
     /*Tamanho e Cor*/
-    background: #333;
-    color: white;
+    background: #F2F2F2;
+    color: #0C0C0D;
     padding: 0px 20px;
     transition: left 0.3s ease;
  }
@@ -85,18 +111,19 @@ header{
     margin: 20px 0;
 }
 .menu-lateral ul li a {
-    color: white;
+    color: #0C0C0D;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s ease;
 }
 .menu-lateral ul li a:hover {
-    color: #007bff;
+    color: #D7D7D9;
 }
 /* Classe para abrir o menu */
 .menu-aberto {
     left: 0 !important;
 }
+
 
 /* ======= Pagina Musicas ======= */
 .titulo{
@@ -140,16 +167,15 @@ header{
 .campo-pesquisa button:hover {
     background-color: #0056b3;
 }
-
 /* Contêiner Responsivo para o Iframe */
 .responsive-iframe {
     position: relative;
-    width: 100%;
+    left: 5%;
+    width: 90%;
     padding-bottom: 56.25%; /* Proporção 16:9 */
     height: 0;
     overflow: hidden;
 }
-
 .responsive-iframe iframe {
     position: absolute;
     width: 100%;
