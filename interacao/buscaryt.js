@@ -1,32 +1,41 @@
+function normalizarTexto(texto) {
+    return texto
+        .toLowerCase() // Converte para minúsculas
+        .normalize("NFD") // Remove acentos
+        .replace(/[\u0300-\u036f]/g, "") // Remove caracteres diacríticos
+        .replace(/\s+/g, "-"); // Substitui espaços por traços
+}
+
 function buscarMusica(){
-    var pesquisa = document.getElementById('pesquisa').ariaValueMax.trim()
+    var pesquisa = document.getElementById('pesquisa').value.trim();
 
-    if(!pesquisa){
-        alert('Digite o nome da música')
-        return
+    if (!pesquisa) {
+        alert('Digite o nome da música');
+        return;
     }
 
-    // Verifica se o nome da música está no objeto 'musicas'
-    if(musicas.hasOwnProperty(pesquisa)){
-        var videoURL = musicas[pesquisa]
+    var chaveNormalizada = normalizarTexto(pesquisa);
 
-        // Exibe o vídeo no iframe
-        var iframe = document.createElement('iframe');
-        iframe.width = "560";
-        iframe.height = "315";
-        iframe.src = videoURL;
-        iframe.frameBorder = "0";
-        iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-        iframe.allowFullscreen = true;
+    var resultadosContainer = document.getElementById('resultados');
+    var iframe = document.getElementById('videoFrame');
 
-        // Exibe o iframe na página
-        var resultadosContainer = document.getElementById('resultados');
-        resultadosContainer.innerHTML = ''; // Limpa resultados anteriores
+    if (musicas.hasOwnProperty(chaveNormalizada)) {
+        var videoID = musicas[chaveNormalizada];
+
+        // Atualiza o iframe com o link embed do vídeo
+        iframe.src = `https://www.youtube.com/embed/${videoID}`;
+
+        // Limpa qualquer mensagem anterior
+        resultadosContainer.innerHTML = "";
         resultadosContainer.appendChild(iframe);
-    }
-    else {
-        // Caso a música não seja encontrada
-        var resultadosContainer = document.getElementById('resultados');
-        resultadosContainer.innerHTML = 'Música não encontrada!';
+    } else {
+        // Se não encontrar, exibe uma mensagem e um link para assistir no YouTube
+        iframe.src = ""; // Remove qualquer vídeo carregado anteriormente
+        resultadosContainer.innerHTML = `
+            <p>Música não encontrada!</p>
+            <a href="https://www.youtube.com/results?search_query=${encodeURIComponent(pesquisa)}" target="_blank">
+                <button>Buscar no YouTube</button>
+            </a>
+        `;
     }
 }

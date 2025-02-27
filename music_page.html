@@ -23,7 +23,7 @@
     <!-- Menu Lateral -->
     <div id="menuLateral" class="menu-lateral">
         <ul>
-            <li><a href="#">Músicas</a></li>
+            <li><a href="music_page.html">Músicas</a></li>
             <li><a href="#">Modo Ensaio</a></li>
             <li><a href="#">Cifras</a></li>
         </ul>
@@ -42,8 +42,10 @@
             </div>
         </section>
 
-        <!-- Aqui será inserido o iframe com o vídeo -->
-        <div id="resultados"></div>
+        <!-- Iframe pré-definido -->
+        <div id="resultados">
+            <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+        </div>
 
         <script src="banco/links_youtube.js"></script> <!-- Importa o arquivo com os dados das músicas -->
         <script src="interacao/buscaryt.js"></script> <!-- Importa o script para buscar e mostrar o vídeo -->
