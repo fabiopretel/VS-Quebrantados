@@ -177,7 +177,6 @@ main{
 /* Contêiner Responsivo para o Iframe */
 .responsive-iframe {
     position: relative;
-    left: 5%;
     width: 90%;
     padding-bottom: 56.25%; /* Proporção 16:9 */
     height: 0;
