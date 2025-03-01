@@ -1,4 +1,4 @@
-/* ======= Estilos Gerais ======= */
+/* ======= ESTILOS GERAIS ======= */
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@ main{
 /* ========== CARROSSEL ========== */
 
 
-/* ======= Botão Menu ======= */
+/* ======= BOTÃO MENU ======= */
 .botaoMenu{
     /*Tamanho e Cor*/
     background: none;
@@ -88,7 +88,7 @@ main{
 }
 
 
- /* ======= Menu Lateral ======= */
+ /* ======= MENU LATERAL ======= */
  .menu-lateral{
     /*Alinhamento*/
     position: fixed;
@@ -127,7 +127,7 @@ main{
 }
 
 
-/* ======= Pagina Musicas ======= */
+/* ======= PÁGINA MUSICAS ======= */
 .titulo{
     padding: 30px;
     font-size: 1.8em;
@@ -180,4 +180,53 @@ main{
     min-width: 30vw;
     min-height: 35vh;
     border: 0;
+}
+
+/* ======= MODO ENSAIO ======= */
+#filtro{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#filtro > button{
+    border-radius: 30px;
+    height: 30px;
+    width: 100px;
+    background-color: #292929;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+#filtro > button:hover{
+    border: 1px solid white;
+}
+#filtro > button.ativo{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.icon-filter{
+    display: flex;
+    width: 110px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: normal;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#grid{
+    width: 98%;
+    max-width: 1200px;
+    height: 100%;
+    box-shadow: 0 0 2px rgba(0, 255, 255, 0.1), 0 0 10px rgba(0, 255, 255, 0.2), 0 0 10px rgba(0, 255, 255, 0.3);
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+#grid:hover{
+    transition: 0.1s ease-in-out;
+    box-shadow: 0 0 2px rgba(0, 255, 255, 0.4), 0 0 10px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.6);
+    overflow: hidden;
 }
