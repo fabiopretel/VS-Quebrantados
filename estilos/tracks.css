@@ -1,11 +1,93 @@
-.info{
-    display: block;
+#info-musica{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     position: relative;
     top: -50px;
-    margin: 0px;
-    padding: 0px;
-    max-width: 99vw;
-    min-width: 490px;
+    width: 100%;
     height: 300px;
-    background-color: antiquewhite;
+    background: linear-gradient(0deg,
+        #21212288 10%,
+        #0C0C0D,
+        #3C3C40,
+        #A09FA6,
+        #D7D7D9,
+        #F2F2F2
+    );
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    border-radius: 20px;
+    background: linear-gradient(0deg,
+            #212122 10%,
+            #0c0c0dbd,
+            #3c3c406c,
+            #a09fa600,
+            #d7d7d900,
+            #f2f2f200),
+     url('../imagens/capas/salvaon-capa.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#nome{
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+}
+#autor{
+    padding-bottom: 10px;
+    font-size: 1.2em;
+    color: white;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+#principal-play{
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#principal-play:hover{
+    border: 1px solid rgba(255, 255, 255, 0.589);
+}
+#principal-play > img{
+    position: relative;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+}
+#more{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+#more:hover{
+    border: 1px solid rgba(255, 255, 255, 0.589);
+}
+#more > img{
+    width: 30px;
+    height: 30px;
 }
