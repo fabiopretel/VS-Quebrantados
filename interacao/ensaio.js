@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Exibe as músicas da página atual (de acordo com a quantidade por página)
         for (let i = indexAtual * itensPorPagina; i < (indexAtual + 1) * itensPorPagina && i < totalMusicas; i++) {
-            musicas[i].style.display = "block";
+            musicas[i].style.display = "flex";
         }
     }
 
@@ -75,12 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
                     const div = document.createElement("div");
                     div.classList.add("musica-card");
 
+                    const img = document.createElement("img");
+                    img.src = musica.foto;  // Foto da música
+                    div.appendChild(img);
+
                     const link = document.createElement("a");
                     link.href = musica.link;
                     link.textContent = musica.nome;
-                    link.target = "_blank"; // Abre em nova aba
+                    link.href = "tracks.html"; // Abre em nova aba
+
+                    const artista = document.createElement("p");
+                    artista.textContent = musica.autor;
+                    artista.style.color = "white";
+                    artista.style.fontSize = "0.9em"; // Autor da música
 
                     div.appendChild(link);
+                    div.appendChild(artista);
                     grid.appendChild(div);
                 });
                 atualizarItensPorPagina(); // Atualiza o número de itens ao carregar as músicas

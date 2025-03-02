@@ -277,16 +277,16 @@ main{
     width: 10px;
 }
 .musica-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
     width: 150px;
     height: 180px;
     background-color: #292929;
-    display: flex;
-    align-items: end baseline;
-    justify-content: center;
     border-radius: 10px;
-    font-size: 14px;
-    text-align: center;
     padding: 10px;
+    text-align: center;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -294,7 +294,13 @@ main{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
+}
+.musica-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 .musica-card:hover {
     background-color: rgba(0, 0, 0, 0.342);

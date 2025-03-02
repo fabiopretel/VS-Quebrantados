@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracks</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/tracks.css">
+    <link rel="icon" href="imagens/QRB_Transparent.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <button class="botaoMenu" onclick="botaoMenu()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="imagens/QRB_Transparent.png" alt="Logo"></a>
+        </div>
+    </header>
+
+    <!-- Menu Lateral -->
+    <div id="menuLateral" class="menu-lateral">
+        <ul>
+            <li><a href="music_page.html">Músicas</a></li>
+            <li><a href="ensaio_page.html">Modo Ensaio</a></li>
+            <li><a href="#">Cifras</a></li>
+        </ul>
+    </div>
+    <script src="interacao/menu.js"></script> <!-- Interação em JS para o botão menu -->
+
+    <main>
+        <section id="info-musica">
+            <div class="info">
+                <p id="nome">Te Esperamos</p>
+                <p id="autor">Salvaon</p>
+                <img id="foto" src="imagens/musicas/te-esperamos-salvaon.avif" alt="capa da musica">
+
+            </div>
+        </section>
+        <section id="tracks">
+            
+        </section>
+
+        <script src="interacao/ensaio.js"></script>
+    </main>
+</body>
+</html>
