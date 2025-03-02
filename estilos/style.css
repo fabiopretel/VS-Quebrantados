@@ -256,6 +256,7 @@ main{
     left: 51.25%;
 }
 .next-button{
+    text-align: center;
     width: 10px;
 }
 #botao-anterior {
@@ -274,6 +275,7 @@ main{
     right: 51.25%;
 }
 .back-button{
+    text-align: center;
     width: 10px;
 }
 .musica-card {
